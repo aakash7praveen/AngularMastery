@@ -1,0 +1,10 @@
+<div class="register-container">
+  <app-auth-card title="Register">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <app-input [parentForm]="registerForm" controlName="name" label="Name"></app-input>
+      <app-input [parentForm]="registerForm" controlName="email" label="Email" type="email"></app-input>
+      <app-input [parentForm]="registerForm" controlName="password" label="Password" type="password"></app-input>
+      <button type="submit" [disabled]="!registerForm.valid" class="btn btn-primary">Register</button>
+    </form>
+  </app-auth-card>
+</div>
